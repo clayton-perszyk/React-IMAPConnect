@@ -4,5 +4,7 @@
   },
   "name": "IMAPApp",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "has-flag": "^2.0.0"
+  }
 }
