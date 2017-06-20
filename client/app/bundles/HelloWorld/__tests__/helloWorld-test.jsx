@@ -25,8 +25,11 @@ describe("helloWorld", function(){
     expect(h1.textContent).toEqual("HELLO WORLD");
   });
 
-  xit("can change input value", function(){
-      var input = hw.refs.input;
+  it("can change input value", function(){
+      var input = TestUtils.findRenderedDOMComponentWithTag(
+        hw, 'input'
+      );
+
       var newValue = 'calyton';
 
       TestUtils.Simulate.change(input, {target: {value: newValue}});

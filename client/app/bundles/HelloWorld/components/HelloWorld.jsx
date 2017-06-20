@@ -37,6 +37,7 @@ export default class HelloWorld extends React.Component {
           <input
             id="name"
             type="text"
+            ref=""
             value={this.state.name}
             onChange={(e) => this.updateName(e.target.value)}
           />
