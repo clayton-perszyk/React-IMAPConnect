@@ -18,7 +18,7 @@ describe("RootComponent", function(){
 
   it("renders a container div", function(){
 
-    var div = TestUtils.findRenderedDOMComponentWithTag(
+    var div = TestUtils.scryRenderedDOMComponentsWithTag(
       comp, 'div'
     )[0];
 
