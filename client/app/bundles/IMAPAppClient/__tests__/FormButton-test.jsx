@@ -1,14 +1,14 @@
 import React from 'react';
 import TestUtils from 'react-dom/test-utils';
 import expect from 'expect';
-import Button from '../components/Button.jsx';
+import FormButton from '../components/FormButton.jsx';
 
-describe("Button", () => {
+describe("FormButton", () => {
   let button, comp, div;
 
   beforeEach( () => {
     comp = TestUtils.renderIntoDocument(
-      <Button
+      <FormButton
         type="submit"
         value="Submit"
        />
@@ -37,7 +37,6 @@ describe("Button", () => {
   });
 
   it("renders button with correct attributes/props", () => {
-    console.log(button)
     expect(button.type).toBe("submit");
     expect(button.value).toBe("Submit");
   });

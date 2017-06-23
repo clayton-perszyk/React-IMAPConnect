@@ -25,6 +25,10 @@ const config = {
     ],
   },
 
+  loaders: [
+    { test: /\.json$/, loader: 'json' },
+  ],
+
   output: {
     // Name comes from the entry section.
     filename: '[name]-[hash].js',
