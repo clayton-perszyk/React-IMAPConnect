@@ -14,6 +14,7 @@ describe("Input", () => {
         type="text"
         name="name"
         labelTitle="input something"
+        onChange={() => { return null; } }
        />
     );
 
@@ -58,5 +59,6 @@ describe("Input", () => {
     expect(input.type).toBe("text");
     expect(input.id).toBe("name");
     expect(input.name).toBe("name");
+    expect(input.onChange).toExist;
   });
 });

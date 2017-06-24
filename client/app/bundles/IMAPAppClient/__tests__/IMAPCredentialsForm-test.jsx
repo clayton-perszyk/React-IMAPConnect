@@ -52,4 +52,23 @@ describe("IMAPCredentialsForm", () => {
     expect(button).toExist;
     expect(button.textContent).toEqual('Submit');
   });
+
+
+  it("has the correct initial state", () => {
+    expect(comp.state.email).toEqual('');
+    expect(comp.state.password).toEqual('');
+    expect(comp.state.imapHost).toEqual('');
+    expect(comp.state.imapPort).toEqual('');
+    expect(comp.state.ssl).toEqual(false);
+  });
+
+  it("can change email state", () => {
+    var input = inputs[0];
+    console.log(input.value);
+    input.value = 'testing@gmail.com';
+
+    TestUtils.Simulate.change(input);
+    console.log(input.value)
+    expect(input.value).toEqual('testing@gmail.com');
+  });
 });
