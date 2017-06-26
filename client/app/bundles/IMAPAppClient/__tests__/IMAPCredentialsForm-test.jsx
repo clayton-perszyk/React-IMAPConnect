@@ -62,13 +62,20 @@ describe("IMAPCredentialsForm", () => {
     expect(comp.state.ssl).toEqual(false);
   });
 
-  it("can change email state", () => {
+  it("can change text input state", () => {
     var input = inputs[0];
-    console.log(input.value);
     input.value = 'testing@gmail.com';
 
     TestUtils.Simulate.change(input);
-    console.log(input.value)
     expect(input.value).toEqual('testing@gmail.com');
   });
+
+  it("can change checkbox state", () => {
+    var input = inputs[4];
+    input.checked = true;
+
+    TestUtils.Simulate.change(input);
+    expect(input.checked).toEqual(true);
+  });
+
 });
