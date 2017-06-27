@@ -37,11 +37,11 @@ describe("IMAPCredentialsForm", () => {
   });
 
   it("renders a container div", () => {
-    expect(div).toExist;
+    expect(div).toExist();
   });
 
   it("renders a form", () => {
-    expect(form).toExist;
+    expect(form).toExist();
   });
 
   it("renders correct number of inputs in form", () => {

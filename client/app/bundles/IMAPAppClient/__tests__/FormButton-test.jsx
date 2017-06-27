@@ -29,11 +29,11 @@ describe("FormButton", () => {
   });
 
   it("renders a container div", () => {
-    expect(div).toExist;
+    expect(div).toExist();
   });
 
   it("renders a button", () => {
-    expect(button).toExist;
+    expect(button).toExist();
   });
 
   it("renders button with correct attributes/props", () => {

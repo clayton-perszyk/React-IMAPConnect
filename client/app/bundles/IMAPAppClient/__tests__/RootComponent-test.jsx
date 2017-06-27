@@ -22,6 +22,6 @@ describe("RootComponent", function(){
       comp, 'div'
     )[0];
 
-    expect(div).toExist;
+    expect(div).toExist();
   });
 });

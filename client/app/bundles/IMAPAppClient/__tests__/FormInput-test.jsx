@@ -39,11 +39,11 @@ describe("Input", () => {
   });
 
   it("renders a container div", () => {
-    expect(div).toExist;
+    expect(div).toExist();
   });
 
   it("renders a label element", () => {
-    expect(label).toExist;
+    expect(label).toExist();
   });
 
   it("renders label with correct attributes/props", () => {
