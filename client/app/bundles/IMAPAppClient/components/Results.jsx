@@ -8,7 +8,7 @@ export default class Results extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='results'>
         <h3>{this.props.results.length} Results</h3>
         <ul>
           {this.props.results.map((item, index) => {
