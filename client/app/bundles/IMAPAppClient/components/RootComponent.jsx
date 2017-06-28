@@ -16,7 +16,7 @@ export default class RootComponent extends React.Component {
           IMAPConnect
         </h2>
           <SearchForm />
-        {/* <IMAPCredentialsForm /> */}
+          <IMAPCredentialsForm />
 
       </div>
     );
