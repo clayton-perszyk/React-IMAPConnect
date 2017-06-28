@@ -1,6 +1,7 @@
 import React from 'react';
 import IMAPCredentialsForm from './IMAPCredentialsForm.jsx';
 import SearchForm from './SearchForm.jsx';
+import jQuery from 'jquery'
 
 export default class RootComponent extends React.Component {
 
@@ -11,9 +12,11 @@ export default class RootComponent extends React.Component {
   render() {
     return (
       <div id="root">
-        <h1>IMAPApp</h1>
+        <h2 id="logo">
+          IMAPConnect
+        </h2>
         <IMAPCredentialsForm />
-        <SearchForm />
+        {/* <SearchForm /> */}
       </div>
     );
   }
