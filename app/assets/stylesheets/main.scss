@@ -9,6 +9,16 @@
 }
 
 
-#formSubmit {
+#imap-form-submit,
+#search-form-submit
+{
   float: right;
+}
+
+.results {
+  text-align: center;
+}
+
+#results-collection  li:nth-child(even) {
+  background-color: #d3d3d3;
 }

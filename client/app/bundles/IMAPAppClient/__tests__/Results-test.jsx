@@ -51,13 +51,13 @@ describe("Input", () => {
     expect(ul).toExist();
   });
 
-  it("should render three list items (one for each result)", () => {
-    expect(li.length).toEqual(3);
+  it("should render three list items (one for each result plus header)", () => {
+    expect(li.length).toEqual(4);
   });
 
   it("should render content of each result", () => {
-    expect(li[0].textContent).toEqual("Re: Outreach Job Offer");
-    expect(li[1].textContent).toEqual("Should we switch to Angular");
-    expect(li[2].textContent).toEqual("Re: Mock Feedback");
+    expect(li[1].textContent).toEqual("Re: Outreach Job Offer");
+    expect(li[2].textContent).toEqual("Should we switch to Angular");
+    expect(li[3].textContent).toEqual("Re: Mock Feedback");
   });
 });

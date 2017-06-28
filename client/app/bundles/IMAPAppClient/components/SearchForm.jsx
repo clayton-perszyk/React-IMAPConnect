@@ -10,7 +10,7 @@ export default class SearchForm extends React.Component {
 
     this.state = {
       email: '',
-      results: []
+      results: ["this is something eh?", "RE: something", "keep on keeping on!!!"]
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -30,20 +30,25 @@ export default class SearchForm extends React.Component {
   render() {
     return (
       <div>
-        <form>
-          <FormInput
-            id="email"
-            name="email"
-            htmlFor="email"
-            labelTitle="Search Emails"
-            type="text"
-            onChange={this.handleInputChange}
-          />
-          <FormButton
-              value="Search"
-              type="submit"
-           />
-        </form>
+        <div className='row'>
+          <form>
+            <FormInput
+              id="email"
+              name="email"
+              htmlFor="email"
+              labelTitle="Search Emails"
+              type="text"
+              onChange={this.handleInputChange}
+              icon="email"
+              colSpan="col s12"
+            />
+            <FormButton
+                value="Search"
+                type="submit"
+                id="search-form-submit"
+             />
+          </form>
+        </div>
         <Results results={this.state.results} />
       </div>
     );

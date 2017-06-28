@@ -6,13 +6,14 @@ export default class Results extends React.Component {
     super(props);
   }
 
+
   render() {
     return (
-      <div className='results'>
-        <h3>{this.props.results.length} Results</h3>
-        <ul>
+      <div className='collection with-header'>
+        <ul id="results-collection">
+          <li><h3 className="results">{this.props.results.length} Results</h3></li>
           {this.props.results.map((item, index) => {
-            return <li key={index}>{item}</li>
+            return <li key={index} className="collection-item" >{item}</li>
           })}
         </ul>
       </div>

@@ -48,7 +48,7 @@ export default class IMAPCredentialsForm extends React.Component {
             <FormButton
               value="Submit"
               type="submit"
-              id="formSubmit"
+              id="imap-form-submit"
             />
         </form>
       </div>

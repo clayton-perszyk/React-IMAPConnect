@@ -38,7 +38,7 @@ describe("FormButton", () => {
 
   it("renders button with correct attributes/props", () => {
     expect(button.type).toBe("submit");
-    expect(button.value).toBe("Submit");
+    expect(button.value).toInclude("Submit");
   });
 
 });

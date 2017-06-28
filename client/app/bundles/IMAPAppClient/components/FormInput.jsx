@@ -9,10 +9,11 @@ export default class FormInput extends React.Component {
 
   render() {
     let component;
+    let colSpan = this.props.colSpan ? this.props.colSpan : "col s12";
 
     if (this.props.type === "checkbox") {
       component = (
-      <p className="input-field col s12">
+      <p className={`input-field ${colSpan}`}>
        <input
           id={this.props.id}
           type={this.props.type}
@@ -22,7 +23,7 @@ export default class FormInput extends React.Component {
       </p>);
     } else {
       component = (
-      <div className="input-field colSpan12">
+      <div className={`input-field ${colSpan}`}>
         <i className="small material-icons prefix">{this.props.icon}</i>
         <input
            id={this.props.id}

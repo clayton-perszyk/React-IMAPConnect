@@ -50,7 +50,7 @@ describe("IMAPCredentialsForm", () => {
 
   it("renders a submit button with correct value", () => {
     expect(button).toExist;
-    expect(button.textContent).toEqual('Submit');
+    expect(button.textContent).toInclude('Submit');
   });
 
 

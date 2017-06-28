@@ -3,13 +3,15 @@ import TestUtils from 'react-dom/test-utils';
 import expect from 'expect';
 import SearchForm from '../components/SearchForm.jsx';
 
-describe("IMAPCredentialsForm", () => {
+describe("SearchForm", () => {
   let button, comp, div, form, inputs, results;
 
   beforeEach( () => {
     comp = TestUtils.renderIntoDocument(
-      <SearchForm  />
+      <SearchForm />
     );
+    
+    comp.state.results = [];
 
     div = TestUtils.scryRenderedDOMComponentsWithTag(
       comp, 'div'
@@ -56,7 +58,7 @@ describe("IMAPCredentialsForm", () => {
 
   it("renders a search button with correct value", () => {
     expect(button).toExist;
-    expect(button.textContent).toEqual('Search');
+    expect(button.textContent).toInclude('Search');
   });
 
 
