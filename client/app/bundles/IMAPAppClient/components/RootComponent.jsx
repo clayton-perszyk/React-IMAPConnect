@@ -17,7 +17,6 @@ export default class RootComponent extends React.Component {
         </h2>
           <SearchForm />
         {/* <IMAPCredentialsForm /> */}
-
       </div>
     );
   }
