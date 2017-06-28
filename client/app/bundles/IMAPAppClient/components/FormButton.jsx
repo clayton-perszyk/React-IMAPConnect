@@ -8,8 +8,11 @@ export default class FormButton extends React.Component {
 
   render() {
     return (
-      <div>
-        <button value={this.props.value} type={this.props.type} >{this.props.value}</button>
+      <div id={this.props.id}>
+        <button className="btn waves-effect waves-light" value={this.props.value} type={this.props.type} >
+          {this.props.value}
+           <i className="material-icons right">send</i>
+        </button>
       </div>
     );
   }

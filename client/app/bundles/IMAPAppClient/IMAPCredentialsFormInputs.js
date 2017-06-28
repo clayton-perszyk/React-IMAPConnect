@@ -1,6 +1,7 @@
 const INPUTS = [
   {
     "name": 'email',
+    "icon": 'email',
     "id": 'email',
     "htmlFor": 'email',
     "labelTitle": 'Gmail',
@@ -9,6 +10,7 @@ const INPUTS = [
   {
     "name": 'password',
     "id": 'password',
+    "icon": 'lock',
     "htmlFor": 'password',
     "labelTitle": 'Password',
     "type": 'password'
@@ -16,6 +18,7 @@ const INPUTS = [
   {
     "name": 'imapHost',
     "id": 'imapHost',
+    "icon": 'dns',
     "htmlFor": 'imapHost',
     "labelTitle": 'Imap Host',
     "type": 'text'
@@ -23,6 +26,7 @@ const INPUTS = [
   {
     "name": 'imapPort',
     "id": 'imapPort',
+    "icon": 'settings_input_svideo',
     "htmlFor": 'imapPort',
     "labelTitle": 'Imap Port',
     "type": 'text'

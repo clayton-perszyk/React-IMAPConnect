@@ -31,10 +31,12 @@ export default class IMAPCredentialsForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='row'>
         <form>
             {INPUTS.map((input) => {
-                return <FormInput key={input.name}
+                return <FormInput
+                    key={input.name}
+                    icon={input.icon}
                     name={input.name}
                     id={input.id}
                     htmlFor={input.htmlFor}
@@ -43,7 +45,11 @@ export default class IMAPCredentialsForm extends React.Component {
                     onChange={this.handleInputChange}
                  />
             })}
-            <FormButton value="Submit" type="submit" />
+            <FormButton
+              value="Submit"
+              type="submit"
+              id="formSubmit"
+            />
         </form>
       </div>
     );
