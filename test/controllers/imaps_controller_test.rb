@@ -27,6 +27,6 @@ class ImapControllerTest < ActionDispatch::IntegrationTest
                                                  host: @imap.host,
                                                  port: @imap.port,
                                                  ssl: @imap.ssl
-                                                }}
+                                                }}, as: :json
   end
 end

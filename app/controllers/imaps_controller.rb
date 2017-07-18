@@ -7,10 +7,8 @@ class ImapsController < ApplicationController
     respond_to do |format|
       if @imap.save
         session[:imap_id] = @imap.id
-        format.html
         format.json { render json: @imap, status: :created }
       else
-        format.html
         format.json  { render json: @imap.errors, status: :unprocessable_entity }
       end
     end
