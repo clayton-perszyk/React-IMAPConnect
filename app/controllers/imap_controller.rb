@@ -1,0 +1,2 @@
+class ImapController < ApplicationController
+end
