@@ -16,7 +16,15 @@ class ImapsController < ApplicationController
 
   def get_email_subjects
       @imap = Imap.find(session[:imap_id])
-      @imap.get_email_subjects(search_params)
+
+      respond_to do |format|
+        if @imap
+          results = @imap.get_email_subjects(search_params)
+          format.json { render json: results, status: :created }
+        else
+          format.json  { render json: "unable to process...", status: :not_found }
+        end
+      end
   end
 
 

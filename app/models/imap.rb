@@ -1,7 +1,7 @@
 class Imap < ApplicationRecord
   require 'net/imap'
 
-  def get_email_subject(searchEmail)
+  def get_email_subjects(searchEmail)
     subjects = []
     imapConnection = Net::IMAP.new(self.host, self.port, self.ssl)
     imapConnection.login(self.email, self.password)

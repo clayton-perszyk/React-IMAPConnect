@@ -10,10 +10,11 @@ export default class SearchForm extends React.Component {
 
     this.state = {
       email: '',
-      results: ["this is something eh?", "RE: something", "keep on keeping on!!!"]
+      results: []
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInputChange(event) {
@@ -23,6 +24,13 @@ export default class SearchForm extends React.Component {
 
     this.setState({
       [name]: value
+    });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    $.getJSON("/get_email_subjects", { email: this.state.email }, (json) => {
+      this.setState({ results: json })
     });
   }
 
@@ -46,6 +54,7 @@ export default class SearchForm extends React.Component {
                 value="Search"
                 type="submit"
                 id="search-form-submit"
+                onSubmit={this.handleSubmit}
              />
           </form>
         </div>
