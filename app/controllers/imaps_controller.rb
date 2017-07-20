@@ -1,11 +1,16 @@
 class ImapsController < ApplicationController
 
   def create_imap_credentials
-    @imap = Imap.new(imap_params)
+    if Imap.exists? email: imap_params[:email]
+        @imap = Imap.find_by_email imap_params[:email]
+    else
+        @imap = Imap.create(imap_params)
+    end
+
 
 
     respond_to do |format|
-      if @imap.save
+      if @imap
         session[:imap_id] = @imap.id
         format.json { render json: @imap, status: :created }
       else
