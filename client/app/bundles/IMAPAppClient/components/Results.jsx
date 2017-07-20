@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactLoading from 'react-loading';
 
 export default class Results extends React.Component {
 
@@ -8,10 +9,22 @@ export default class Results extends React.Component {
 
 
   render() {
+    let header;
+
+    if (this.props.isSpinning) {
+      header = <ReactLoading type="bars" color="#287EA9" id="searchSpinner" />;
+    } else {
+      if (this.props.results.length > 0) {
+        header = `${this.props.results.length} emails from ${this.props.email}`;
+      } else {
+        header = "Please search an email address.";
+      }
+    }
+    
     return (
       <div className='collection with-header'>
         <ul id="results-collection">
-          <li><h3 className="results">{this.props.results.length} Results</h3></li>
+          <li><h4 className="results">{header}</h4></li>
           {this.props.results.map((item, index) => {
             return <li key={index} className="collection-item" >{item}</li>
           })}

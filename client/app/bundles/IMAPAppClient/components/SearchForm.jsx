@@ -2,6 +2,7 @@ import React from 'react';
 import FormInput from './FormInput.jsx';
 import FormButton from './FormButton.jsx';
 import Results from './Results.jsx';
+import ReactLoading from 'react-loading';
 
 export default class SearchForm extends React.Component {
 
@@ -10,7 +11,8 @@ export default class SearchForm extends React.Component {
 
     this.state = {
       email: '',
-      results: []
+      results: [],
+      isSpinning: false
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -29,8 +31,9 @@ export default class SearchForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    this.setState({ isSpinning: true });
     $.getJSON("/get_email_subjects", { email: this.state.email }, (json) => {
-      this.setState({ results: json })
+      this.setState({ results: json, isSpinning: false })
     });
   }
 
@@ -58,7 +61,10 @@ export default class SearchForm extends React.Component {
              />
           </form>
         </div>
-        <Results results={this.state.results} />
+        <Results results={this.state.results}
+                 isSpinning={this.state.isSpinning}
+                 email={this.state.email}
+        />
       </div>
     );
   }
