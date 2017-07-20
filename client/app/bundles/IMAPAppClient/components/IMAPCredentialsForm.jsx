@@ -46,6 +46,7 @@ export default class IMAPCredentialsForm extends React.Component {
   render() {
     return (
       <div className='row'>
+        <p id="only-gmail-notice">Currently only supports Gmail (host: imap.googlemail.com)</p>
         <form>
             {INPUTS.map((input) => {
                 return <FormInput

@@ -11,10 +11,25 @@
 
 .results {
   text-align: center;
+  font-size: 26px;
+  font-family: Helvetica, sans-serif; 
+}
+
+.collection {
+    background: #E8E8EE;
 }
 
 #results-collection  li:nth-child(even) {
-  background-color: #d3d3d3;
+  background-color: #4CDBC4;
+}
+
+#results-collection  li:nth-child(odd) {
+  background-color: #E8E8EE;
+}
+
+#results-collection  li {
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
 }
 
 #logo {
@@ -23,4 +38,10 @@
 
 #searchSpinner {
   margin-left: 43.7%;
+}
+
+#only-gmail-notice {
+  text-align: center;
+  color: tomato;
+  font-size: 16px;
 }

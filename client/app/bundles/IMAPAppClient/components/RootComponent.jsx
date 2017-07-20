@@ -18,12 +18,12 @@ export default class RootComponent extends React.Component {
   render() {
     return (
       <div id="root">
-      <Router history={browserHistory}>
-        <div>
-          <Route exact path='/' component={IMAPCredentialsForm} />
-          <Route path='/search' component={SearchForm} />
-        </div>
-      </Router>
+        <Router history={browserHistory}>
+          <div>
+            <Route exact path='/' component={IMAPCredentialsForm} />
+            <Route path='/search' component={SearchForm} />
+          </div>
+        </Router>
       </div>
 
     );
