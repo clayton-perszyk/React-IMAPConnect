@@ -18,9 +18,6 @@ export default class RootComponent extends React.Component {
   render() {
     return (
       <div id="root">
-      {/* <h2 id="logo">
-        IMAPConnect
-      </h2> */}
       <Router history={browserHistory}>
         <div>
           <Route exact path='/' component={IMAPCredentialsForm} />

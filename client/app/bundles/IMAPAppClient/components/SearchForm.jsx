@@ -21,8 +21,6 @@ export default class SearchForm extends React.Component {
     const value = target.value;
     const name = target.name;
 
-    console.log(value)
-
     this.setState({
       [name]: value
     });

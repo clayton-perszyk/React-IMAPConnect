@@ -9,7 +9,9 @@ export default class FormButton extends React.Component {
   render() {
     return (
       <div id={this.props.id} className={this.props.colSpan}>
-        <button className="btn waves-effect waves-light" value={this.props.value} type={this.props.type} >
+        <button className="btn waves-effect waves-light"
+                value={this.props.value} type={this.props.type}
+                onClick={this.props.onSubmit}>
           {this.props.value}
            <i className="material-icons right">send</i>
         </button>

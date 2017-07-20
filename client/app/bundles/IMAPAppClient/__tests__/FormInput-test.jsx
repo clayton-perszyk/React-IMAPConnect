@@ -13,6 +13,7 @@ describe("Input", () => {
         id="name"
         type="text"
         name="name"
+        refer="name"
         labelTitle="input something"
         onChange={() => { return null; } }
        />
@@ -59,6 +60,7 @@ describe("Input", () => {
     expect(input.type).toBe("text");
     expect(input.id).toBe("name");
     expect(input.name).toBe("name");
+    expect(comp.props.refer).toBe("name");
     expect(input.onChange).toExist;
   });
 });

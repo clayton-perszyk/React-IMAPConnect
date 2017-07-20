@@ -5,7 +5,7 @@ const INPUTS = [
     "id": 'email',
     "htmlFor": 'email',
     "labelTitle": 'Gmail',
-    "type": 'text'
+    "type": 'text',
   },
   {
     "name": 'password',
@@ -13,7 +13,7 @@ const INPUTS = [
     "icon": 'lock',
     "htmlFor": 'password',
     "labelTitle": 'Password',
-    "type": 'password'
+    "type": 'password',
   },
   {
     "name": 'imapHost',
@@ -21,7 +21,7 @@ const INPUTS = [
     "icon": 'dns',
     "htmlFor": 'imapHost',
     "labelTitle": 'Imap Host',
-    "type": 'text'
+    "type": 'text',
   },
   {
     "name": 'imapPort',
@@ -29,14 +29,14 @@ const INPUTS = [
     "icon": 'settings_input_svideo',
     "htmlFor": 'imapPort',
     "labelTitle": 'Imap Port',
-    "type": 'text'
+    "type": 'text',
   },
   {
     "name": 'ssl',
     "id": 'ssl',
     "htmlFor": 'ssl',
     "labelTitle": 'Use SSL ?',
-    "type": 'checkbox'
+    "type": 'checkbox',
   }
 ];
 
