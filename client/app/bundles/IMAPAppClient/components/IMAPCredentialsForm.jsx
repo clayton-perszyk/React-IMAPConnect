@@ -25,7 +25,7 @@ export default class IMAPCredentialsForm extends React.Component {
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   }
 

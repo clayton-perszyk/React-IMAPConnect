@@ -12,7 +12,8 @@ export default class SearchForm extends React.Component {
     this.state = {
       email: '',
       results: [],
-      isSpinning: false
+      isSpinning: false,
+      search: true
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -25,7 +26,8 @@ export default class SearchForm extends React.Component {
     const name = target.name;
 
     this.setState({
-      [name]: value
+      [name]: value,
+      search: true
     });
   }
 
@@ -33,7 +35,7 @@ export default class SearchForm extends React.Component {
     event.preventDefault();
     this.setState({ isSpinning: true });
     $.getJSON("/get_email_subjects", { email: this.state.email }, (json) => {
-      this.setState({ results: json, isSpinning: false })
+      this.setState({ results: json, isSpinning: false, search: false })
     });
   }
 
@@ -62,6 +64,7 @@ export default class SearchForm extends React.Component {
           </form>
         </div>
         <Results results={this.state.results}
+                 search={this.state.search}
                  isSpinning={this.state.isSpinning}
                  email={this.state.email}
         />
