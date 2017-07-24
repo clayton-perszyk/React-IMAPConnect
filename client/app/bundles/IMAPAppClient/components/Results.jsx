@@ -14,7 +14,7 @@ export default class Results extends React.Component {
     if (this.props.isSpinning) {
       header = <ReactLoading type="bars" color="#287EA9" id="searchSpinner" />;
     } else {
-      if (this.props.results.length > 0 && !this.props.search) {
+      if (this.props.results.length >= 0 && !this.props.search) {
         header = `${this.props.results.length} emails from ${this.props.email}`;
         results = this.props.results.map((item, index) => {
                     return <li key={index} className="collection-item" >{item}</li>
