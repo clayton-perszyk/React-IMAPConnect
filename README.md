@@ -1,37 +1,38 @@
-# Outreach Coding Challenge
+# IMAPConnect
 
-Do you like whiteboard programming challenges and brain teasers? We do sometimes, but we also don't think they are the right tool to evaluate programming aptitude. The purpose of this challenge is to provide an opportunity to demonstrate real world programming ability. If you are not familiar with [React](https://facebook.github.io/react/), this challenge will also demonstrate the ability to rapidly pick up new technologies.
+A simple full-stack application written in React on the front-end, and Ruby On Rails on the back-end. The application allows a user to visit the home page and enter their IMAP credentials (currently only supports Gmail); the app then uses the credentials to retrieve the email subjects of a particular email address via a search form.
 
-## The Challenge
+## Requirements
+* Ruby
+* Ruby On Rails
+* Foreman
+* NPM
+* Yarn
 
-The challenge is to create an extremely simple full-stack application using React and the backend of your choice. The application will allow users to input their [IMAP credentials](https://support.google.com/mail/troubleshooter/1668960?hl=en) and then retrieve all correspondences they have had with a particular email address.
+## Additional Technologies Include:
+* ES6
+* React Router
+* React Loading
+* Materialize
+* Karma
+* Mocha
 
-The application should consist of at least two pages:
+## Build Steps
 
-A page to input their IMAP credentials. This might look something like:
+1. Clone Repo
+2. Run: ```bundle && yarn```
+3. Run Migrations: ```bin/rails db:migrate```
+4. Start Server: ```foreman start -f Procfile.dev```
+5. Visit: ```http://localhost:3000/#/```
+6. Have Fun!!!
 
-![Screen 1](mocks/screen1.png)
 
-A page to allow the user to search for all emails from a particular email address:
-
-![Screen 2 with no input](mocks/screen2-empty.png)
-
-The results should simply consist of email subjects:
-
-![Screen 2 with results](mocks/screen2-results.png)
-
-The above is just a guideline. At the end of the day, anything that demonstrates a basic IMAP integration into a super simple React app will suffice.
-
-## Submitting Your Challenge
-
-To submit your completed challenge, *do not* create a pull request to his repo. Instead email a link to your fork.
-
-## Bonus Points
-
-Bonus points if you use/include any of the following:
-
-* [Use ES2015](https://babeljs.io/)
-* [React Router](https://github.com/ReactTraining/react-router)
-* Use Ruby on the backend
-* Include tests
-* Make it pretty
+## Ideas for Future Versions:
+* More Tests
+* Add Security (e.g. encrypt/decrypt IMAP password)
+* Add Better Front-End Validation
+* Include Better Error Handling
+* Make Back-End RESTful
+* Redesign Backend (e.g. create more models/controllers and associations)
+* Add a User model with authentication
+* Make it compatible with other email servers (currently only supports Gmail)
