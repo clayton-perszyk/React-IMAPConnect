@@ -36,3 +36,4 @@ A simple full-stack application written in React on the front-end, and Ruby On R
 * Redesign Backend (e.g. create more models/controllers and associations)
 * Add a User model with authentication
 * Make it compatible with other email servers (currently only supports Gmail)
+* Add better validation (both front-end and back-end)

@@ -17,6 +17,7 @@ export default class FormInput extends React.Component {
           type={this.props.type}
           name={this.props.name}
           onChange={this.props.onChange}
+          required={'required'}
         />
     );
 

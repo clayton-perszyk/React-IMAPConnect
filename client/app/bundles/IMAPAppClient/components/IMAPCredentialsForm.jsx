@@ -30,7 +30,12 @@ export default class IMAPCredentialsForm extends React.Component {
   }
 
   handleSubmit(event) {
+    let form = document.getElementsByTagName('form')[0];
+
+    if (!form.checkValidity()) { return; }
+
     event.preventDefault();
+    
     const { email, password, imapHost, imapPort, ssl } = this.state;
 
     $.ajax({
