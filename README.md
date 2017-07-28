@@ -19,7 +19,7 @@ A simple full-stack application written in React on the front-end, and Ruby On R
 
 ## Build Steps
 
-1. Clone Repo
+1. Clone Repo ```git clone https://github.com/clayton-perszyk/take-home-project.git```
 2. Run: ```bundle && yarn```
 3. Run Migrations: ```bin/rails db:migrate```
 4. Start Server: ```foreman start -f Procfile.dev```
@@ -28,7 +28,7 @@ A simple full-stack application written in React on the front-end, and Ruby On R
 
 
 ## Ideas for Future Versions:
-* More Tests
+* More Tests (both front-end and back-end)
 * Add Security (e.g. encrypt/decrypt IMAP password)
 * Add Better Front-End Validation
 * Include Better Error Handling
