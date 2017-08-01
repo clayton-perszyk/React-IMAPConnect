@@ -16,11 +16,13 @@ export default class Results extends React.Component {
     } else {
       if (this.props.results.length >= 0 && !this.props.search) {
         header = `${this.props.results.length} emails from ${this.props.email}`;
+
         results = this.props.results.map((item, index) => {
                     return <li key={index} className="collection-item" >{item}</li>
                   });
       } else {
         header = `Search for emails from ${this.props.email || '....'}`;
+
         results = null;
       }
     }
