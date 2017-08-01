@@ -1,4 +1,5 @@
 # Outreach Coding Challenge
+![imap-gif](https://user-images.githubusercontent.com/7948430/28807703-b9ff5a84-762b-11e7-9a16-2c9ea0b4d7b7.gif)
 
 Do you like whiteboard programming challenges and brain teasers? We do sometimes, but we also don't think they are the right tool to evaluate programming aptitude. The purpose of this challenge is to provide an opportunity to demonstrate real world programming ability. If you are not familiar with [React](https://facebook.github.io/react/), this challenge will also demonstrate the ability to rapidly pick up new technologies.
 
