@@ -1,7 +1,15 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactLoading from 'react-loading';
 
 export default class Results extends React.Component {
+
+  propTypes: {
+    isSpinning: React.PropTypes.bool,
+    results: React.PropTypes.array.isRequired,
+    search: React.PropTypes.array.isRequired,
+    email: React.PropTypes.string.isRequired
+  }
 
   constructor(props, _railsContext) {
     super(props);

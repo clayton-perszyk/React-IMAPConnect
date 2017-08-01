@@ -33,7 +33,7 @@ export default class SearchForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    
+
     this.setState({ isSpinning: true });
     $.getJSON("/get_email_subjects", { email: this.state.email }, (json) => {
       this.setState({ results: json, isSpinning: false, search: false })

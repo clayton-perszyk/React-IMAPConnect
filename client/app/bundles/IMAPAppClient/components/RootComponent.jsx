@@ -1,15 +1,23 @@
+import PropTypes from 'prop-types';
+import IMAPCredentialsForm from './IMAPCredentialsForm.jsx';
 import React from 'react';
+import SearchForm from './SearchForm.jsx';
 import {
   HashRouter as Router,
   Route,
   browserHistory,
   IndexRoute
 } from 'react-router-dom';
-import IMAPCredentialsForm from './IMAPCredentialsForm.jsx';
-import SearchForm from './SearchForm.jsx';
+
 
 
 export default class RootComponent extends React.Component {
+
+  propTypes: {
+    browserHistory: React.PropTypes.element.isRequired,
+    IMAPCredentialsForm: React.PropTypes.element.isRequired,
+    SearchForm: React.PropTypes.element.isRequired,
+  }
 
   constructor(props, _railsContext) {
     super(props);

@@ -1,7 +1,7 @@
-import React from 'react';
 import FormInput from './FormInput.jsx';
 import FormButton from './FormButton.jsx';
-import INPUTS from '../IMAPCredentialsFormInputs.js'
+import INPUTS from '../IMAPCredentialsFormInputs.js';
+import React from 'react';
 
 export default class IMAPCredentialsForm extends React.Component {
 
@@ -35,7 +35,7 @@ export default class IMAPCredentialsForm extends React.Component {
     if (!form.checkValidity()) { return; }
 
     event.preventDefault();
-    
+
     const { email, password, imapHost, imapPort, ssl } = this.state;
 
     $.ajax({
