@@ -3,15 +3,21 @@
    margin: auto;
 }
 
-#imap-form-submit,
-#search-form-submit
+#imap-form-submit
 {
   float: right;
 }
 
+.btn#search-form-submit {
+  width: 600px;
+  height: 45px;
+  font-size: 20px;
+}
+
 .results {
+  color: #006699;
   text-align: center;
-  font-size: 26px;
+  font-size: 28px;
   font-family: Helvetica, sans-serif;
 }
 
