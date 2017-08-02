@@ -1,13 +1,24 @@
 # IMAPConnect
 
-A simple full-stack application written in React on the front-end, and Ruby On Rails on the back-end. The application allows a user to visit the home page and enter their IMAP credentials (currently only supports Gmail); the app then uses the credentials to retrieve the email subjects of a particular email address via a search form.
+A full-stack application written in React and Ruby On Rails, IMAPConnect allows users to connect to their email accounts via their IMAP credentials (currently only supports Gmail), and search for emails from their contacts.
 
-## Requirements
+![iimapgif](https://user-images.githubusercontent.com/7948430/28897304-eb1e615e-7794-11e7-8c41-282380a68452.gif)
+
+## Requirements:
 * Ruby
 * Ruby On Rails
 * Foreman
 * NPM
 * Yarn
+
+## Build Steps:
+
+1. Clone Repo ```git clone https://github.com/clayton-perszyk/take-home-project.git```
+2. Run: ```bundle && yarn```
+3. Run Migrations: ```bin/rails db:migrate```
+4. Start Server: ```foreman start -f Procfile.dev```
+5. Visit: ```http://localhost:3000/#/```
+6. Have Fun!!!
 
 ## Additional Technologies Include:
 * ES6
@@ -17,23 +28,16 @@ A simple full-stack application written in React on the front-end, and Ruby On R
 * Karma
 * Mocha
 
-## Build Steps
-
-1. Clone Repo ```git clone https://github.com/clayton-perszyk/take-home-project.git```
-2. Run: ```bundle && yarn```
-3. Run Migrations: ```bin/rails db:migrate```
-4. Start Server: ```foreman start -f Procfile.dev```
-5. Visit: ```http://localhost:3000/#/```
-6. Have Fun!!!
-
 
 ## Ideas for Future Versions:
-* More Tests (both front-end and back-end)
-* Add Security (e.g. encrypt/decrypt IMAP password)
-* Add Better Front-End Validation
-* Include Better Error Handling
-* Make Back-End RESTful
-* Redesign Backend (e.g. create more models/controllers and associations)
+* More tests
+* Rewrite test, using Enzyme and Jest
+* Add security (e.g. encrypt/decrypt IMAP password)
+* Include better error handling
+* Make back-end RESTful
+* Redesign backend (e.g. create more models/controllers and associations)
 * Add a User model with authentication
 * Make it compatible with other email servers (currently only supports Gmail)
 * Add better validation (both front-end and back-end)
+* Make search faster
+* Work on refactoring code
