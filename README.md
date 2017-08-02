@@ -14,11 +14,12 @@ A full-stack application written in React and Ruby On Rails, IMAPConnect allows 
 ## Build Steps:
 
 1. Clone Repo ```git clone https://github.com/clayton-perszyk/take-home-project.git```
-2. Run: ```bundle && yarn```
-3. Run Migrations: ```bin/rails db:migrate```
-4. Start Server: ```foreman start -f Procfile.dev```
-5. Visit: ```http://localhost:3000/#/```
-6. Have Fun!!!
+2. Execute: ```cd take-home-project```
+3. Run: ```bundle && yarn```
+4. Run Migrations: ```bin/rails db:migrate```
+5. Start Server: ```foreman start -f Procfile.dev```
+6. Visit: ```http://localhost:3000/#/```
+7. Have Fun!!!
 
 ## Additional Technologies Include:
 * ES6
