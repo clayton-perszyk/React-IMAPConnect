@@ -31,13 +31,13 @@ A full-stack application written in React and Ruby On Rails, IMAPConnect allows 
 
 ## Ideas for Future Versions:
 * More tests
-* Rewrite test, using Enzyme and Jest
+* Rewrite tests, using Enzyme and Jest
 * Add security (e.g. encrypt/decrypt IMAP password)
 * Include better error handling
 * Make back-end RESTful
 * Redesign backend (e.g. create more models/controllers and associations)
 * Add a User model with authentication
 * Make it compatible with other email servers (currently only supports Gmail)
-* Add better validation (both front-end and back-end)
+* Add better validations (both front-end and back-end)
 * Make search faster
 * Work on refactoring code
